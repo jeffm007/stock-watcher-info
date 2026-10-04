@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mitchell Stock Watcher</title>
+<meta name="description" content="Mitchell Stock Watcher: a private, single-user portfolio dashboard. App description and privacy policy.">
+<style>
+  :root { --bg: #ffffff; --fg: #1f2933; --muted: #52606d; --rule: #e4e7eb; --accent: #0f766e; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #111418; --fg: #e4e7eb; --muted: #9aa5b1; --rule: #2a3038; --accent: #5eead4; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
+  h2 { font-size: 1.35rem; margin: 48px 0 8px; padding-top: 24px; border-top: 1px solid var(--rule); }
+  h3 { font-size: 1.05rem; margin: 28px 0 4px; }
+  p, li { color: var(--fg); }
+  .lede { color: var(--muted); font-size: 1.1rem; margin-top: 0; }
+  .meta { color: var(--muted); font-size: .9rem; }
+  a { color: var(--accent); }
+  ul { padding-left: 1.25rem; }
+  nav a { margin-right: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Mitchell Stock Watcher</h1>
+  <p class="lede">A private, self-hosted portfolio dashboard built and used by one person to view his own accounts.</p>
+  <nav><a href="#about">About</a><a href="#privacy">Privacy policy</a><a href="#contact">Contact</a></nav>
+
+  <h2 id="about">About the app</h2>
+  <p>Mitchell Stock Watcher is a personal finance tool operated by Jeffrey Mitchell for his own household's accounts. It is not offered to the public, has no other users, and is not a commercial product.</p>
+  <p>The app combines account data into a single dashboard that shows portfolio value, holdings, performance over time, and checking, savings and credit card activity. It connects to financial institutions through <a href="https://plaid.com">Plaid</a> and also imports statements the account owner downloads and uploads himself.</p>
+  <p>The app is <strong>read-only</strong>. It does not place trades, move money, initiate payments or change anything at a financial institution.</p>
+
+  <h2 id="privacy">Privacy policy</h2>
+  <p class="meta">Effective October 4, 2026</p>
+
+  <h3>Who this policy covers</h3>
+  <p>The only user of this app is its operator, Jeffrey Mitchell, and the only accounts connected are his own household's. No data about anyone else is collected.</p>
+
+  <h3>Data the app accesses</h3>
+  <p>With the account owner's consent, given through Plaid Link, the app reads:</p>
+  <ul>
+    <li>Account details: account names, types, the last four digits of account numbers, and balances.</li>
+    <li>Investment holdings: securities, quantities, prices, values and cost basis.</li>
+    <li>Transactions: investment transactions, and checking, savings and credit card transactions.</li>
+  </ul>
+  <p>The app never receives or stores login credentials for any financial institution. Sign-in happens on the institution's own site or through Plaid.</p>
+
+  <h3>How the data is used</h3>
+  <p>The data is used only to show the account owner his portfolio, balances, performance and spending, and to produce reports for his own use. It is not sold, rented, used for advertising, or shared with anyone for their own purposes.</p>
+
+  <h3>Where the data is stored and how it is protected</h3>
+  <ul>
+    <li>Data is stored in a database on a private, self-hosted server controlled by the account owner, not on a third-party cloud service.</li>
+    <li>Plaid access tokens are encrypted before they are stored.</li>
+    <li>The dashboard requires a password to sign in, and connections to institutions are made over HTTPS.</li>
+  </ul>
+
+  <h3>Service providers</h3>
+  <p>To run its features, the app sends limited data to these services:</p>
+  <ul>
+    <li><strong>Plaid:</strong> connects to financial institutions and returns the account data described above, under <a href="https://plaid.com/legal/#end-user-privacy-policy">Plaid's End User Privacy Policy</a>.</li>
+    <li><strong>Market-data providers</strong> (for example, Tradier and Polygon): receive ticker symbols only, to look up current prices. No account or personal information is sent.</li>
+    <li><strong>Google Gemini API:</strong> only when the owner asks for an AI portfolio analysis, it receives holding symbols with their values and cost basis to generate commentary. No account numbers, credentials or personal identifiers are sent.</li>
+    <li><strong>Email:</strong> optional summary emails are sent only to the owner's own address, through his own mail provider.</li>
+  </ul>
+
+  <h3>Retention and deletion</h3>
+  <p>Data is kept only as long as the account owner wants it for his own records. Any institution connection can be removed from inside the app at any time. Removing a connection revokes it with Plaid, so no further data is retrieved, and deletes that connection's stored accounts, holdings and transactions from the app. The owner can also revoke access through <a href="https://my.plaid.com">Plaid Portal</a>.</p>
+
+  <h3>Changes to this policy</h3>
+  <p>If how the app handles data changes, this page will be updated and the effective date above revised.</p>
+
+  <h2 id="contact">Contact</h2>
+  <p>Questions about this app or its data practices: <a href="mailto:jeffm007@yahoo.com">jeffm007@yahoo.com</a></p>
+</main>
+</body>
+</html>
